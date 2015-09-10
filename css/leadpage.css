@@ -1,0 +1,318 @@
+body, .btn {
+	font-family: 'Open Sans';
+}
+
+body {
+	font-size: 18px;
+	
+	padding: 50px 0;
+	background-image: url(../image/background2.jpg);
+	background-size: cover;
+}
+
+.dialog-background {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.9);
+	z-index: 1;
+}
+
+.dialog {
+	height: 80%;
+	top: 10%;
+
+	position: absolute;
+	width: 600px;
+	
+	z-index: 1000;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+label {
+	font-weight: normal !important;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.input-group {
+	display: block;
+	margin-bottom: 10px;
+}
+
+form {
+	margin: 0;
+}
+
+.btn-subscribe {
+	width: 100%;
+	height: 50px;
+	font-size: 18px;
+	border-radius: 0;
+}
+
+.line {
+	border-bottom: 1px solid #999;
+	width: 100%;
+	position: relative;
+	margin: 15px 0;
+}
+
+.line-text {
+	color: #666;
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	bottom: -10px;
+	text-align: center;
+}
+
+.line-text span {
+	background: white;
+	padding: 0 20px;
+	font-weight: 700;
+}
+
+input[type=email], input[type=text] {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 2px solid #ddd;
+}
+
+input[type=email]:focus, input[type=text]:focus {
+	box-shadow: none;
+	border-color: #333;
+	outline: none;
+}
+
+input[type=radio] {
+	display: none;
+}
+
+input[type=radio] + label {
+	border: 1px solid #ddd;
+	padding: 10px;
+	margin: 5px 0;
+	width: 100%;
+	transition: all 0.1s ease;
+}
+
+input[type=radio] + label:hover {
+	background: #eee;
+}
+
+.btn-close {	
+	position: absolute;
+	right: -50px;
+	width: 50px;
+	top: 0px;
+	background: #ddd;
+	color: #333;
+	font-size: 24px;
+	line-height: 1em;
+	border-radius: 0;
+}
+
+input[type=radio]:checked + label {
+	border-color: rgba(0, 0, 0, 0);
+	background: #666;
+	color: white;
+}
+
+.dialog-title {
+	background: #333;
+	padding: 15px;
+	color: white;
+	border: 15px solid white;
+	border-bottom: none;
+}
+
+.dialog-body {
+	padding: 15px;
+	height: 90%;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	background: white;
+	//border: 5px solid white;
+}
+
+.main-section {
+	//width: 1180px !important;
+	padding: 15px;	
+	background: rgba(10, 10, 10, 0.8);
+	position: relative;
+}
+
+.main-section-content {
+	background: white;
+	padding: 15px;
+}
+
+.footer-section {
+	padding-bottom: 15px;
+}
+
+.price-tag {
+	position: absolute;
+	right: 0;
+	top: 0;
+	background: #333;
+	padding: 10px;
+	color: white;
+	font-size: 24px;
+}
+
+.test-section {
+	font-size: 20px;	
+	height: 75px;
+	background: rgba(33, 33, 33, 0.9);
+	color: white;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.test-section .col-btn {
+	padding: 0;
+}
+
+.test-section .col-text {
+	padding: 10px;
+}
+
+.btn-test {
+	width: 100%;
+	font-size: 20px;
+	border-radius: 0;
+	height: 100%;
+}
+
+.read-btn {
+	font-size: 18px;
+	font-family: 'Lato';
+	padding: 10px 0;
+	background: #00AFEF;
+	border: 2px solid #1B7292;
+	color: white;
+	margin-top: 20px;
+	width: 100%;
+	transition: all 0.1s ease;
+}
+
+.read-btn:hover, .read-btn:focus {
+	background: #1B7292;
+}
+
+.clear {
+	clear: both;
+}
+
+.col-main {
+	width: 666px;
+	float: left;
+}
+
+.script {
+	font-family: 'Satisfy';
+}
+
+.no-margin {
+	margin: 0;
+}
+
+.author-section {
+	background: #ccc;
+}
+
+.col-right{
+	float: left;
+	padding-left: 20px;
+	width: 333px;
+}
+
+.black-section {
+	background: rgba(10, 10, 10, 0.8);
+	color: white;
+}
+
+h2 {
+	font-weight: 300;
+}
+
+img {
+	max-width: 100%;
+}
+
+.profile {
+	//background: rgba(231,76,60, 0.8);
+	padding: 10px;
+}
+
+#logo {
+	width: 300px;
+	margin: 30px 0;
+}
+
+.no-padding {
+	padding: 0;
+}
+
+.container {
+	width: 1100px;
+	margin: auto;
+}
+
+.content-box {
+	position: relative;
+}
+
+.content-heading {
+	font-size: 18px;
+
+	background: #eee;
+	color: white;	
+	display: inline-block;
+	padding: 10px 20px;
+	border: 2px solid #1B7292;
+	border-bottom: none;
+	position: absolute;
+	top: -42px;
+	display: none;
+}
+
+.content-notice {
+	font-size: 18px;
+	background: #00AFEF;
+	color: white;
+	padding: 20px;
+	line-height: 1.4em;
+}
+
+.content-body {
+	background: #eee;
+	border: 2px solid #00AFEF;
+	padding: 20px;
+}
+
+.btn-danger {
+	background-color: #C0392B !important;
+}
+
+#mc_embed_signup input.mce_inline_error { border-color:#C0392B !important; } 
+#mc_embed_signup div.mce_inline_error { 
+	background-color: #C0392B !important;
+	font-weight: normal !important; 
+	z-index: 1; color:#fff; 
+	margin-top: -5px;
+}

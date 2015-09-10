@@ -1,0 +1,192 @@
+html(lang='en')
+	head
+		link(href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,300italic,300,600,600italic,700,700italic', rel='stylesheet', type='text/css')
+		link(href='https://fonts.googleapis.com/css?family=Satisfy', rel='stylesheet', type='text/css')
+		script(src='https://code.jquery.com/jquery-2.1.4.min.js')
+		script(src='/js/home.js')
+		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css')
+		script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js')
+		script(src='https://app.convertkit.com/assets/CKJS4.js?v=21')
+		link(rel='stylesheet', href='/css/home.css')
+	body
+		.dialog-background.dialog-test.hide
+			.dialog.register-dialog
+				.dialog-title
+					center
+						img(style='width: 150px;', src='/img/logowhite.png')
+					.btn-close.btn ×
+				.dialog-body
+					.line.info-group
+						.line-text
+							span test result
+					.col-result-medal.center.info-group
+						img(id='result-medal')
+					.col-result-content
+						#goodstart-reader.hide
+							strong It's a good start!
+								br
+							i You are on the right track. By applying a few simple tips, you should be able to triple your learning in half of the time. Read the tips.
+								br
+								br
+
+						#entrepreneur-reader.hide
+							strong You read like an entrepreneur!
+								br
+							i You are a learning machine. You learn as fast as the entrepreneur would do to lead the people and run his business. If you are in short in learning time, <link>read a few advanced tips </link> to double your learning in less time reading.
+								br
+								br
+
+						#expert-reader.hide
+							strong You are an expert!
+								br
+							i People look at you as a role model when it comes to reading. <link>Review a few advanced tips</link> that other avid reader use.
+								br
+								br
+
+					.clear
+
+					// Begin MailChimp Signup Form
+					.line.info-group
+						.line-text
+							span subscribe to BaR
+					i.info-group
+						| Stay with us and get up to date with professional reading methods. We always keep your information secret.
+					br.info-group
+					br.info-group
+					#mc_embed_signup
+						form#mc-embedded-subscribe-form.validate(action='//vutranbooks.us11.list-manage.com/subscribe/post?u=35ceaea81da32be0ee7ccc513&id=17c1e3a18f', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
+							#mc_embed_signup_scroll
+								.mc-field-group.info-group
+									input#mce-EMAIL.required.email(type='email', value='', name='EMAIL', placeholder='Enter your email address')
+								.mc-field-group.info-group
+									input#mce-NAME(type='text', value='', name='NAME', placeholder='Enter your name')
+
+								.line.question-group
+									.line-text
+										span reading skill
+								i.question-group
+									| These questions will let you know more about your self.
+									| Answer within the first sight, don't try to choose what is best, choose what is right for you.
+								br.question-group
+								br.question-group
+								.mc-field-group.input-group.question-group
+									strong How many non-fiction books do you usually read? 
+									ul
+										li
+											input#mce-MMERGE3-0(data-score='0', type='radio', value='Less than 10 books per year', name='MMERGE3')
+											label(for='mce-MMERGE3-0') Less than 10 books per year
+										li
+											input#mce-MMERGE3-1(data-score='0.25', type='radio', value='One every month', name='MMERGE3')
+											label(for='mce-MMERGE3-1') One every month
+										li
+											input#mce-MMERGE3-2(data-score='0.5', type='radio', value='50 books per year', name='MMERGE3')
+											label(for='mce-MMERGE3-2') 50 books per year
+										li
+											input#mce-MMERGE3-3(data-score='1', type='radio', value='More than one book per week', name='MMERGE3')
+											label(for='mce-MMERGE3-3') More than one book per week
+								.mc-field-group.input-group.question-group
+									strong How many non-fiction books did you re-read this year? 
+									ul
+										li
+											input#mce-MMERGE4-0(data-score='0.25', type='radio', value='Less than 5', name='MMERGE4')
+											label(for='mce-MMERGE4-0') Less than 5
+										li
+											input#mce-MMERGE4-1(data-score='0.5', type='radio', value='From 5 to 12', name='MMERGE4')
+											label(for='mce-MMERGE4-1') From 5 to 12
+										li
+											input#mce-MMERGE4-2(data-score='1', type='radio', value='More than 12', name='MMERGE4')
+											label(for='mce-MMERGE4-2') More than 12
+										li
+											input#mce-MMERGE4-3(data-score='0', type='radio', value="No, I don't re-read my book", name='MMERGE4')
+											label(for='mce-MMERGE4-3') No, I don't re-read my book
+								.mc-field-group.input-group.question-group
+									strong How do you usually read a non-fiction book? 
+									ul
+										li
+											input#mce-MMERGE5-0(data-score='0', type='radio', value='I always read from cover to cover all of my books', name='MMERGE5')
+											label(for='mce-MMERGE5-0') I always read from cover to cover all of my books
+										li
+											input#mce-MMERGE5-1(data-score='0.5', type='radio', value='I read a few chapters, usually less than half', name='MMERGE5')
+											label(for='mce-MMERGE5-1') I read a few chapters, usually less than half
+										li
+											input#mce-MMERGE5-2(data-score='1', type='radio', value='I read only one or two relevant chapters', name='MMERGE5')
+											label(for='mce-MMERGE5-2') I read only one or two relevant chapters
+										li
+											input#mce-MMERGE5-3(data-score='0.25', type='radio', value='I read from the beginning to end unless I feel bored', name='MMERGE5')
+											label(for='mce-MMERGE5-3') I read from the beginning to end unless I feel bored
+
+								#mce-responses.clear
+									#mce-error-response.response(style='display:none')
+									#mce-success-response.response(style='display:none')
+								// real people should not fill this in and expect good things - do not remove this or risk form bot signups
+								div(style='position: absolute; left: -5000px;')
+									input(type='text', name='b_35ceaea81da32be0ee7ccc513_17c1e3a18f', tabindex='-1', value='')
+								.clear
+									input#mc-embedded-subscribe.info-group.btn.btn-danger.btn-subscribe.button(type='submit', value='Confirm', name='subscribe')
+									input#btn-reading-result.btn.btn-danger.btn-subscribe.button(value='View your result', type='button')
+					script(type='text/javascript', src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js')
+					script(type='text/javascript').
+						(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='NAME';ftypes[1]='text';fnames[3]='MMERGE3';ftypes[3]='radio';fnames[4]='MMERGE4';ftypes[4]='radio';fnames[5]='MMERGE5';ftypes[5]='radio';}(jQuery));var $mcj = jQuery.noConflict(true);
+					// End mc_embed_signup
+		.container.black-section.header-section
+			center
+				img#logo(src='/img/logowhite.png')
+		.container.main-section
+			.main-section-content
+				.test-section
+					.col-md-9.col-text
+						| Discover your reading skill
+						br
+						| 						Take this 3-question-test and reveal your reading ability.
+					.col-md-3.col-btn
+						button.btn.btn-lg.btn-danger.btn-test Test your self
+				.clear
+				.book-section
+					.col-md-3
+						img(src='http://designbyinsight.net/wp-content/uploads/2011/06/ML-3D-Cover-500.jpg', style='width: 100%')
+					.col-md-9
+						h1.script A book about reading
+						h3 Available on 22 Sep
+						br
+						p
+							| Millionaires with total freedom live in their own foreign country. And if you get the opportunity to be around them for longer than three months you’ll start to pick up their accent, their unique language and their swagger.
+						p
+							| Today I want to show you what this country is and how you can immerse yourself in it. Like any foreign language you can’t learn it in a single night, you can’t learn it by reading a book and you have to practice. If you immerse yourself for about three months into a culture you’ll begin to absorb and start speaking the language.
+						p
+							| The Foundation has this culture, we speak this language and after six months of full immersion our members come out fluent. It takes practice, it takes application and it takes time. Once you speak it you’ll be able to print money when you want. It won’t matter what kind of business you were in, it won’t matter what kind of product you sell, it won’t matter if you’re an employee, it won’t matter if you don’t even have anything to sell. You’ll be able to print money legally. Learn how to Start a Successful Business by first learning this secret language.
+				.hide.ck_form.ck_vertical_subscription_form
+					.ck_form_fields
+						#ck_success_msg(style='display:none;')
+							p Success! Now check your email to confirm your subscription.
+						// Form starts here
+						form#ck_subscribe_form.ck_subscribe_form(action='https://app.convertkit.com/landing_pages/3274/subscribe', data-remote='true')
+							input#ck_form_options(type='hidden', value='{"embed_style":"inline","embed_trigger":"scroll_percentage","scroll_percentage":"70","delay_seconds":"10","display_position":"br","display_devices":"all","days_no_show":"15","converted_behavior":"show"}')
+							input#landing_page_id(type='hidden', name='id', value='3274')
+							.ck_errorArea
+								#ck_error_msg(style='display:none')
+									p There was an error submitting your subscription. Please try again.
+							.ck_control_group.ck_first_name_field_group
+								label.ck_label(for='ck_firstNameField') First Name
+								input#ck_firstNameField.ck_first_name(type='text', name='first_name')
+							.ck_control_group.ck_email_field_group
+								label.ck_label(for='ck_emailField') Email Address
+								input#ck_emailField.ck_email_address(type='email', name='email', required='')
+							button#ck_subscribe_button.subscribe_button.ck_subscribe_button.btn.fields
+								| Subscribe
+				.clear
+				br
+				br
+				.author-section
+					.col-md-9(style='padding-top: 0; padding-left: 20px;')
+						h1.script About the author
+						p
+							| Millionaires with total freedom live in their own foreign country. And if you get the opportunity to be around them for longer than three months you’ll start to pick up their accent, their unique language and their swagger.
+						p
+							| Today I want to show you what this country is and how you can immerse yourself in it. Like any foreign language you can’t learn it in a single night, you can’t learn it by reading a book and you have to practice. If you immerse yourself for about three months into a culture you’ll begin to absorb and start speaking the language.
+					.col-md-3
+						.profile
+							img(src='/img/vutran.jpg', style='margin-bottom: 5px;')
+							center(style='color: #333;') Vu Tran
+					.clear
+		.container.black-section.footer-section
+			center © 2015 Vu Tran (Trần Hoàn Vũ)
