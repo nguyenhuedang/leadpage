@@ -13,14 +13,30 @@ $(function() {
 
 	$('#btn-reading-result').click(function() {
 		if (questionValidate()) {
-			viewResult();
+			var currentQuestion = $('.current-question');
+			var currentQuestionId = parseInt(currentQuestion.data('id'));
+
+			if (currentQuestionId < 3) {
+				var nextQuestion = currentQuestion.next();
+				currentQuestion.removeClass('current-question');
+				currentQuestion.addClass('hide');
+				nextQuestion.addClass('current-question');
+				nextQuestion.removeClass('hide');
+				$('.progress-bar').css('width', currentQuestionId*33.33 + "%");
+			} else {
+				viewResult();	
+			}
+
+			if (currentQuestion.data('id') == 2) {
+				$('#btn-reading-result').val('View your result');
+			}
 		};
 	});
 });
 
 function questionValidate() {
 	var validateResult = true;
-	$('.input-group.question-group').each(function() {
+	$('.current-question').each(function() {
 		var thisQuestionGroup = $(this);
 		console.log(thisQuestionGroup.find('input:checked'));
 		if (thisQuestionGroup.find('input:checked').length == 0) {

@@ -69,7 +69,7 @@ form {
 }
 
 .line-text {
-	color: #666;
+	color: #333;
 	position: absolute;
 	margin: auto;
 	left: 0;
@@ -252,13 +252,39 @@ input[type=radio]:checked + label {
 	clear: both;
 }
 
+h1 {
+	font-size: 60px;
+	//color: #C0392B !important;
+	margin-bottom: 0;
+	margin-top: 30px;
+}
+
+h2 {
+	font-size: 27px;
+	//background: #333;
+	display: inline-block;
+	//color: white;
+	//padding: 10px;
+	margin-top: 0px;
+}
+
+h2.black {
+	//background: #333;
+}
+
+h2.silver {
+	background: #ddd;
+	color: #333;
+	padding: 10px;
+}
+
 .col-main {
 	width: 666px;
 	float: left;
 }
 
 .script {
-	font-family: 'Satisfy';
+	font-family: 'Slabo 27px';
 }
 
 .no-margin {

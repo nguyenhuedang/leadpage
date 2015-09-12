@@ -1,19 +1,22 @@
 html(lang='en')
 	head
+		title= pageTitle
 		link(href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,300italic,300,600,600italic,700,700italic', rel='stylesheet', type='text/css')
-		link(href='https://fonts.googleapis.com/css?family=Satisfy', rel='stylesheet', type='text/css')
+		link(href='https://fonts.googleapis.com/css?family=Slabo+27px', rel='stylesheet', type='text/css')
 		script(src='https://code.jquery.com/jquery-2.1.4.min.js')
 		script(src='/js/home.js')
 		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css')
 		script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js')
 		script(src='https://app.convertkit.com/assets/CKJS4.js?v=21')
 		link(rel='stylesheet', href='/css/home.css')
+		link(href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAACwAAAAsAAAALAAAACwAAAAsAAAAOAAAAJgAAACIAAAAMAAAACwAAAAsAAAALAAAACwAAAAsAAAACAAAAI1MyC6BTMguhUzILoVMyC6FTMguhUzILoaZkFf+mZBX/UzILo1MyC6FTMguhUzILoVMyC6FTMguhAAAAI2A+FYqRnab/k5ug/5OboP+UnKH/lZ2i/5aeo/+Oo7f/jqO3/5Wdo/+TnKH/kZqg/5CaoP+RmqD/kJyl/18+FYpfPRSKudjw/8jm+v+93/T/sNTr/6DG3v+RttD/lMDb/5rF3v+fvtL/xtvn//b7/f/+////7/v//8Pe8P9fPRSKXz0UirrY7//F4vb/u9vx/7LV7P+nz+f/m8Hb/9fn8/+Ywtz/udbo/9Xn8f/z+Pv/+f3//+n2/v/E3u//XjwUil48FIq92vD/xeL1/7jY7f+tydv/ytvm//r9///q+P//lsHb/7jV5//V5vH/8vj7//n9///p9v7/xt/w/148FIpePBSKwNzx/8Xi9f+10OL/5/f///n+///2+///6ff//5bB2/+41ef/1ebx//L4+//5/f//6fb+/8jg8P9ePBSKXjwUisPd8f/E4vX/tc/i/+X1///4/f//9vv//+n3//+Wwdv/uNXn/9Xm8f/y+Pv/+f3//+n2/v/L4fH/XjwUil48FIrG3/L/xOL1/7XP4v/l9f//+P3///b7///p9///lsHb/7jV5//V5vH/8vj7//n9///p9v7/zePy/148FIpePBSKyeHy/8Ti9f+1z+L/5fX///j9///2+///6ff//5bB2/+41ef/1ebx//L4+//5/f//6fb+/9Dl8/9ePBSKXjwUiszj8//E4vX/tc/i/+X1///4/f//9vv//+n3//+Wwdv/uNXn/9Xm8f/y+Pv/+f3//+n2/v/S5vP/XjwUil48FIrP5PT/w+H2/7TP4v/l9f//+P3///b7///p9///lsHb/7jV5//V5vH/8vj7//n9///p9v7/1Of0/108FIYAAAAEscre/8PX5f+qv87/5fX///j9///2+///6fj//5bC3f+51un/0OLt/+Tq7v/b4uf/1eDn/7XM3v8AAAAEAAAAAAAAAAAAAAAAi5unnOb1///4/f//+v7//8nd6vZLUlc/VV5kf1BYX2hMVFokTFRZGwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFdiaorn9v//+v3//7PJ2dUAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADX4ep/7Pb9fNDd5S8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAIABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAEAAOD/AADh/wAA//8AAA==" rel="icon" type="image/x-icon")
+
 	body
 		.dialog-background.dialog-test.hide
 			.dialog.register-dialog
 				.dialog-title
 					center
-						img(style='width: 150px;', src='/img/logowhite.png')
+						img(style='width: 150px;', src='/img/#{logo}' )
 					.btn-close.btn ×
 				.dialog-body
 					.line.info-group
@@ -69,7 +72,10 @@ html(lang='en')
 									| Answer within the first sight, don't try to choose what is best, choose what is right for you.
 								br.question-group
 								br.question-group
-								.mc-field-group.input-group.question-group
+								.progress.question-group
+									.progress-bar.progress-bar-danger(role='progressbar', aria-valuenow='80', aria-valuemin='0', aria-valuemax='100', style='width: 0%')
+
+								.mc-field-group.input-group.question-group.current-question(data-id='1')
 									strong How many non-fiction books do you usually read? 
 									ul
 										li
@@ -84,7 +90,7 @@ html(lang='en')
 										li
 											input#mce-MMERGE3-3(data-score='1', type='radio', value='More than one book per week', name='MMERGE3')
 											label(for='mce-MMERGE3-3') More than one book per week
-								.mc-field-group.input-group.question-group
+								.mc-field-group.input-group.question-group.hide(data-id='2')
 									strong How many non-fiction books did you re-read this year? 
 									ul
 										li
@@ -99,7 +105,7 @@ html(lang='en')
 										li
 											input#mce-MMERGE4-3(data-score='0', type='radio', value="No, I don't re-read my book", name='MMERGE4')
 											label(for='mce-MMERGE4-3') No, I don't re-read my book
-								.mc-field-group.input-group.question-group
+								.mc-field-group.input-group.question-group.hide(data-id='3')
 									strong How do you usually read a non-fiction book? 
 									ul
 										li
@@ -123,14 +129,14 @@ html(lang='en')
 									input(type='text', name='b_35ceaea81da32be0ee7ccc513_17c1e3a18f', tabindex='-1', value='')
 								.clear
 									input#mc-embedded-subscribe.info-group.btn.btn-danger.btn-subscribe.button(type='submit', value='Confirm', name='subscribe')
-									input#btn-reading-result.btn.btn-danger.btn-subscribe.button(value='View your result', type='button')
+									input#btn-reading-result.btn.btn-danger.btn-subscribe.button(value='Next question', type='button')
 					script(type='text/javascript', src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js')
 					script(type='text/javascript').
 						(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='NAME';ftypes[1]='text';fnames[3]='MMERGE3';ftypes[3]='radio';fnames[4]='MMERGE4';ftypes[4]='radio';fnames[5]='MMERGE5';ftypes[5]='radio';}(jQuery));var $mcj = jQuery.noConflict(true);
 					// End mc_embed_signup
 		.container.black-section.header-section
 			center
-				img#logo(src='/img/logowhite.png')
+				img#logo(src='/img/#{logo}')
 		.container.main-section
 			.main-section-content
 				.test-section
@@ -142,18 +148,13 @@ html(lang='en')
 						button.btn.btn-lg.btn-danger.btn-test Test your self
 				.clear
 				.book-section
-					.col-md-3
-						img(src='http://designbyinsight.net/wp-content/uploads/2011/06/ML-3D-Cover-500.jpg', style='width: 100%')
-					.col-md-9
-						h1.script A book about reading
-						h3 Available on 22 Sep
+					.col-md-3.col-middle
+						img(src='/img/#{cover}', style='width: 90%')
+					.col-md-9.col-middle
+						h1.script= title
+						h2.script.black= description
 						br
-						p
-							| Millionaires with total freedom live in their own foreign country. And if you get the opportunity to be around them for longer than three months you’ll start to pick up their accent, their unique language and their swagger.
-						p
-							| Today I want to show you what this country is and how you can immerse yourself in it. Like any foreign language you can’t learn it in a single night, you can’t learn it by reading a book and you have to practice. If you immerse yourself for about three months into a culture you’ll begin to absorb and start speaking the language.
-						p
-							| The Foundation has this culture, we speak this language and after six months of full immersion our members come out fluent. It takes practice, it takes application and it takes time. Once you speak it you’ll be able to print money when you want. It won’t matter what kind of business you were in, it won’t matter what kind of product you sell, it won’t matter if you’re an employee, it won’t matter if you don’t even have anything to sell. You’ll be able to print money legally. Learn how to Start a Successful Business by first learning this secret language.
+						h2.script.silver Available on Sep 22						
 				.hide.ck_form.ck_vertical_subscription_form
 					.ck_form_fields
 						#ck_success_msg(style='display:none;')
@@ -174,9 +175,7 @@ html(lang='en')
 							button#ck_subscribe_button.subscribe_button.ck_subscribe_button.btn.fields
 								| Subscribe
 				.clear
-				br
-				br
-				.author-section
+				.author-section.hide
 					.col-md-9(style='padding-top: 0; padding-left: 20px;')
 						h1.script About the author
 						p
