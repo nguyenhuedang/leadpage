@@ -6,19 +6,19 @@ var titleData = {
 		pageTitle: 'Effective Reading',
 		title: 'EFFECTIVE READING',
 		logo: 'er.png',
-		cover: 'er_cover.png'
+		cover: 'effective-cover.png'
 	},
 	'effortless-reading': {
 		pageTitle: 'Effortless Reading',
 		title: 'EFFORTLESS READING',
 		logo: 'elr.png',
-		cover: 'er_cover.png'
+		cover: 'effortless-cover.png'
 	},
 	'deliberated-reading': {
 		pageTitle: 'Deliberated Reading',
 		title: 'DELIBERATED READING',
 		logo: 'dr.png',
-		cover: 'dr_cover.png'
+		cover: 'deliberated-cover.png'
 	}
 }
 

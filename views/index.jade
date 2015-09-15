@@ -139,22 +139,24 @@ html(lang='en')
 				img#logo(src='/img/#{logo}')
 		.container.main-section
 			.main-section-content
-				.test-section
-					.col-md-9.col-text
-						| Discover your reading skill
-						br
-						| 						Take this 3-question-test and reveal your reading ability.
-					.col-md-3.col-btn
-						button.btn.btn-lg.btn-danger.btn-test Test your self
-				.clear
+				
 				.book-section
-					.col-md-3.col-middle
-						img(src='/img/#{cover}', style='width: 90%')
+					.col-md-4.col-middle(style='margin: 0 -50px;')
+						img(src='/img/#{cover}', style='width: 100%')
 					.col-md-9.col-middle
-						h1.script= title
-						h2.script.black= description
+						h1.script= description
+						//h2.script.black= description
 						br
-						h2.script.silver Available on Sep 22						
+						h2.script.silver Available on Sep 22
+						.test-section
+							.col-md-9.col-text
+								| Discover your reading skill
+								br
+								| 						Take this 3-question-test and reveal your reading ability.
+							.col-md-3.col-btn
+								button.btn.btn-lg.btn-danger.btn-test Test now
+						.clear
+												
 				.hide.ck_form.ck_vertical_subscription_form
 					.ck_form_fields
 						#ck_success_msg(style='display:none;')
