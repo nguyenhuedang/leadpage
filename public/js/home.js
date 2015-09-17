@@ -11,6 +11,26 @@ $(function() {
 
 	$('.info-group').addClass('hide');
 
+	$('.question-group').find('input').click(function() {
+		var currentQuestion = $('.current-question');
+		var currentQuestionId = parseInt(currentQuestion.data('id'));
+
+		if (currentQuestionId < 3) {
+			var nextQuestion = currentQuestion.next();
+			currentQuestion.removeClass('current-question');
+			currentQuestion.addClass('hide');
+			nextQuestion.addClass('current-question');
+			nextQuestion.removeClass('hide');
+			$('.progress-bar').css('width', currentQuestionId*33.33 + "%");
+		} else {
+			viewResult();
+		}
+
+		if (currentQuestion.data('id') == 2) {
+			$('#btn-reading-result').val('View your result');
+		}
+	});
+
 	$('#btn-reading-result').click(function() {
 		if (questionValidate()) {
 			var currentQuestion = $('.current-question');
