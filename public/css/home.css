@@ -2,6 +2,11 @@ body, .btn {
 	font-family: 'Open Sans';
 }
 
+.response {
+	margin-bottom: 10px;
+	font-style: italic;
+}
+
 body {
 	font-size: 18px;
 	

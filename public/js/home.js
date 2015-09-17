@@ -6,7 +6,17 @@ $(function() {
 
 	$('.btn-test').click(function() {
 		$('.dialog-test').removeClass('hide');
-		$('#mce-EMAIL').focus();
+		
+	});
+
+	$('#mc-embedded-subscribe').mouseup(function() {
+		console.log('ab');
+		var completeMessage = $('#mce-success-response');
+		setTimeout(function() {
+			if (completeMessage.css('display') != 'none') {
+				$('.before-subscribe').addClass('hide');
+			}
+		}, 1000);
 	});
 
 	$('.info-group').addClass('hide');
@@ -84,8 +94,6 @@ function viewResult() {
 		totalScore += checkedScore;
 	});
 
-	console.log(totalScore);
-
 	if (totalScore < 1) {
 		$('#goodstart-reader').removeClass('hide');
 		$('#result-medal').addClass('bronze');
@@ -96,4 +104,6 @@ function viewResult() {
 		$('#expert-reader').removeClass('hide');
 		$('#result-medal').addClass('gold');
 	}
+
+	$('#mce-EMAIL').focus();
 }
