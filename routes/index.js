@@ -23,31 +23,23 @@ var titleData = {
 }
 
 var descriptionData = {
-	srg: 'The simple ways to read and guarantee results',
-	rrr: 'The simple ways to read and guarantee remarkable results',
-	ssr: 'The surprisingly simple ways to read and guarantee remarkable results'
+	gr: 'The simple ways to read and guarantee result',
+	grr: 'The simple ways to read and guarantee remarkable result',
+	sgrr: 'The surprisingly simple ways to read and guarantee remarkable result'
 }
 
 router.get('/', function(req, res, next) {
-	res.redirect('/effective-reading/srg');
-});
-
-router.get('/:titleIndex', function(req, res, next) {
-	var titleIndex = req.params.titleIndex;
-	res.redirect('/' + titleIndex + '/srg');
+	res.redirect('/grr');
 });
 
 /* GET home page. */
-router.get('/:titleIndex/:descriptionIndex', function(req, res, next) {
-	var titleIndex = req.params.titleIndex;
+router.get('/:descriptionIndex', function(req, res, next) {
 	var descriptionIndex = req.params.descriptionIndex;
-
-	if (titleIndex == null) {
-		titleIndex = 'effective-reading';
-	}
+	
+	titleIndex = 'effortless-reading';
 
 	if (descriptionData[descriptionIndex] == null) {
-		descriptionIndex = 'srg';
+		descriptionIndex = 'grr';
 	}
 
 	res.render('index', { 

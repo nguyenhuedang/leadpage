@@ -71,6 +71,7 @@ form {
 	width: 100%;
 	position: relative;
 	margin: 15px 0;
+	display: none;
 }
 
 .line-text {
@@ -128,13 +129,16 @@ input[type=radio] + label {
 
 #result-medal {
 	background: url(../img/medal.png);
-	height: 140px;
+	//height: 140px;
 	width: 100px;
+	width: 100%;
+	padding-bottom: 140%;
+	height: 0;
 	background-size: cover;
 }
 
 #result-medal.bronze{
-	background-position: 104px
+	background-position: 120px
 }
 
 #result-medal.silver{
@@ -162,7 +166,7 @@ input[type=radio] + label:hover {
 }
 
 .text-danger {
-	color: #C0392B !important;
+	color: #ED3237 !important;
 }
 
 input[type=radio]:checked + label {
@@ -215,11 +219,11 @@ input[type=radio]:checked + label {
 
 .test-section {
 	font-size: 20px;	
-	height: 75px;
-	background: rgba(33, 33, 33, 0.9);
+	height: 95px;
+	background: #333;
 	color: white;
 	position: relative;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 
 .test-section .col-btn {
@@ -235,6 +239,15 @@ input[type=radio]:checked + label {
 	font-size: 20px;
 	border-radius: 0;
 	height: 100%;
+	background-image: url(../img/test-backgroud-short.png) !important;
+	background-size: contain;
+	background-repeat: no-repeat;
+	border: none;
+	padding-left: 80px;
+}
+
+.btn-danger {
+	background-color: #ED3237;
 }
 
 .read-btn {
@@ -258,10 +271,11 @@ input[type=radio]:checked + label {
 }
 
 h1 {
-	font-size: 60px;
+	font-size: 54px;
 	//color: #C0392B !important;
-	margin-bottom: 0;
+	margin-bottom: 10px;
 	margin-top: 30px;
+	line-height: 1.1em;
 }
 
 h2 {
@@ -370,14 +384,15 @@ img {
 	padding: 20px;
 }
 
-.btn-danger {
-	background-color: #C0392B !important;
+.btn-test:focus {
+	background-color: #ac2925;
+
 }
 
-#mc_embed_signup input.mce_inline_error { border-color:#C0392B !important; } 
+#mc_embed_signup input.mce_inline_error { border-color:#ED3237 !important; } 
 #mc_embed_signup div.mce_inline_error { 
-	background-color: #C0392B !important;
+	background-color: rgba(237, 50, 55, 0.5) !important;
 	font-weight: normal !important; 
-	z-index: 1; color:#fff; 
+	z-index: 1; color: #333 !important; 
 	margin-top: -5px;
 }

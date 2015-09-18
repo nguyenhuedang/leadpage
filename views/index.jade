@@ -34,41 +34,41 @@ html(lang='en')
 				.dialog-body
 					.line.info-group
 						.line-text
-							span test result
-					.col-result-medal.center.info-group
-						img(id='result-medal')
-					.col-result-content
+							span Test result
+					
+					.col-result-content(style='text-align: justify; padding-right: 20px;')
 						#goodstart-reader.hide
 							strong It's a good start!
 								br
-							i You are on the right track. By applying a few simple tips, you should be able to triple your learning in half of the time. Read the tips.
+							i You are on the right track. You could leverage more reading to set yourself ahead of others. The book is written for you. By applying a few simple tips, you should be able to triple your learning in half of the time.
 								br
 								br
 
 						#entrepreneur-reader.hide
 							strong You read like an entrepreneur!
 								br
-							i You are a learning machine. You learn as fast as the entrepreneur would do to lead the people and run his business. If you are in short in learning time, <link>read a few advanced tips </link> to double your learning in less time reading.
+							i You are a learning machine. You learn as fast as the a successful entrepreneur lead his business. With the reading approach offered in this book, you can take back half of your time (to spend it with your loved one instead), and still able to maintain the same learning rate you demand.
 								br
 								br
 
 						#expert-reader.hide
 							strong You are an expert!
 								br
-							i People look at you as a role model when it comes to reading. <link>Review a few advanced tips</link> that other avid reader use.
+							i People look at you as a role model when it comes to reading. You know your books in and out. Your home library is what brought you the success you deserved. This book offers the new reading approach that people at your level use to double their efficiencies in learning.
 								br
 								br
+
+					.col-result-medal.center.info-group
+						img(id='result-medal')
 
 					.clear
 
 					// Begin MailChimp Signup Form
 					.line.info-group
 						.line-text
-							span subscription
-					i.info-group.before-subscribe
-						| Stay with us and get up to date with professional reading methods. We always keep your information secret.
-					br.info-group.before-subscribe
-					br.info-group.before-subscribe
+							span Subscription
+					div(style='margin-bottom: 10px').info-group
+						strong Where should I send the book to?
 					#mc_embed_signup
 						form#mc-embedded-subscribe-form.validate(action='//vutranbooks.us11.list-manage.com/subscribe/post?u=35ceaea81da32be0ee7ccc513&id=17c1e3a18f', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
 							#mc_embed_signup_scroll
@@ -83,12 +83,12 @@ html(lang='en')
 
 								.line.question-group
 									.line-text
-										span reading skill
-								i.question-group
+										span Reading skill
+								i.question-group.hide
 									| These questions will let you know more about your self.
 									| Answer within the first sight, don't try to choose what is best, choose what is right for you.
-								br.question-group
-								br.question-group
+								br.question-group.hide
+								br.question-group.hide
 								.progress.question-group
 									.progress-bar.progress-bar-danger(role='progressbar', aria-valuenow='80', aria-valuemin='0', aria-valuemax='100', style='width: 0%')
 
@@ -158,21 +158,32 @@ html(lang='en')
 			.main-section-content
 				
 				.book-section
-					.col-md-4.col-middle(style='margin: 0 -50px;')
+					.col-md-5.col-middle(style='margin: 0 -50px;')
 						img(src='/img/#{cover}', style='width: 100%')
-					.col-md-9.col-middle
+					.col-md-8.col-middle
 						h1.script= description
 						//h2.script.black= description
+						h2.script.silver Available on 
+							span.text-danger October 11
+						p(style='font-size:20px')
+							| The book offers a new approach to reading non-fiction. By applying this simple approach, you will, one again, in control of your self-development. 4X your reading with half the effort. No speed reading skill required. 
 						br
-						h2.script.silver Available on Sep 22
 						.test-section
-							.col-md-9.col-text
-								| Discover your reading skill
+							.col-md-8.col-text LIMITED ADVANCED DIGITAL COPY ($7.99)
 								br
-								| 						Take this 3-question-test and reveal your reading ability.
-							.col-md-3.col-btn
-								button.btn.btn-lg.btn-danger.btn-test Test now
+								small Take the 30-second test & grab a FREE copy
+									br
+									| if you are qualified*
+
+							.col-md-4.col-btn
+								button.btn.btn-lg.btn-danger.btn-test(value='') GET YOUR
+									br
+									small FREE COPY
 						.clear
+
+						i *Only available until September 30, 2015.
+						br
+						br
 												
 				.clear
 				.author-section.hide
