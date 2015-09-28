@@ -35,7 +35,7 @@ html(lang='en')
 					.line.info-group
 						.line-text
 							span Test result
-					
+
 					.col-result-content(style='text-align: justify; padding-right: 20px;')
 						#goodstart-reader.hide
 							strong It's a good start!
@@ -75,6 +75,7 @@ html(lang='en')
 								.mc-field-group.hide
 									input#mce-TITLE(type='text', value='#{title}', name='TITLE')
 									input#mce-SUBTITLE(type='text', value='#{description}', name='SUBTITLE')
+									input#mce-FROM(type='text', value='#{from}', name='FROM')
 								.mc-field-group.info-group.before-subscribe
 									input#mce-EMAIL.required.email(type='email', value='', name='EMAIL', placeholder='Enter your email address')
 								.mc-field-group.info-group.before-subscribe
@@ -93,7 +94,7 @@ html(lang='en')
 									.progress-bar.progress-bar-danger(role='progressbar', aria-valuenow='80', aria-valuemin='0', aria-valuemax='100', style='width: 0%')
 
 								.mc-field-group.input-group.question-group.current-question(data-id='1')
-									strong How many non-fiction books do you usually read? 
+									strong How many non-fiction books do you usually read?
 									ul
 										li
 											input#mce-MMERGE3-0(data-score='0', type='radio', value='Less than 10 books per year', name='MMERGE3')
@@ -108,7 +109,7 @@ html(lang='en')
 											input#mce-MMERGE3-3(data-score='1', type='radio', value='More than one book per week', name='MMERGE3')
 											label(for='mce-MMERGE3-3') More than one book per week
 								.mc-field-group.input-group.question-group.hide(data-id='2')
-									strong How many non-fiction books did you re-read this year? 
+									strong How many non-fiction books did you re-read this year?
 									ul
 										li
 											input#mce-MMERGE4-0(data-score='0.25', type='radio', value='Less than 5', name='MMERGE4')
@@ -123,7 +124,7 @@ html(lang='en')
 											input#mce-MMERGE4-3(data-score='0', type='radio', value="No, I don't re-read my book", name='MMERGE4')
 											label(for='mce-MMERGE4-3') No, I don't re-read my book
 								.mc-field-group.input-group.question-group.hide(data-id='3')
-									strong How do you usually read a non-fiction book? 
+									strong How do you usually read a non-fiction book?
 									ul
 										li
 											input#mce-MMERGE5-0(data-score='0', type='radio', value='I always read from cover to cover all of my books', name='MMERGE5')
@@ -156,17 +157,17 @@ html(lang='en')
 				img#logo(src='/img/#{logo}')
 		.container.main-section
 			.main-section-content
-				
+
 				.book-section
 					.col-md-5.col-middle(style='margin: 0 -50px;')
 						img(src='/img/#{cover}', style='width: 100%')
 					.col-md-8.col-middle
 						h1.script= description
 						//h2.script.black= description
-						h2.script.silver Available on 
+						h2.script.silver Available on
 							span.text-danger October 11
 						p(style='font-size:20px')
-							| The book offers a new approach to reading non-fiction. By applying this simple approach, you will, one again, in control of your self-development. 4X your reading with half the effort. No speed reading skill required. 
+							| The book offers a new approach to reading non-fiction. By applying this simple approach, you will, one again, in control of your self-development. 4X your reading with half the effort. No speed reading skill required.
 						br
 						.test-section
 							.col-md-8.col-text LIMITED ADVANCED DIGITAL COPY ($7.99)
@@ -184,7 +185,7 @@ html(lang='en')
 						i *Only available until September 30, 2015.
 						br
 						br
-												
+
 				.clear
 				.author-section.hide
 					.col-md-9(style='padding-top: 0; padding-left: 20px;')
