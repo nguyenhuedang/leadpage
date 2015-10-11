@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo nodemon bin/www
+sudo forever start /usr/local/leadpage/source/bin/www
