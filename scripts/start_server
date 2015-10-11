@@ -1,2 +1,2 @@
 #!/bin/bash
-nodemon bin/www
+sudo nodemon bin/www
