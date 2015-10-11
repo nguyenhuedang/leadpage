@@ -1,3 +1,4 @@
 #!/bin/bash
-npm install -g nodemon
-npm install
+sudo npm install -g nodemon
+cd ..
+sudo npm  install
