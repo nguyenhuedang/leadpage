@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo forever start /usr/local/leadpage/source/bin/www
+sudo forever start bin/www
