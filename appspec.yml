@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /usr/local/leadpage/source
+    destination: /usr/local/leadpage/source/
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies
