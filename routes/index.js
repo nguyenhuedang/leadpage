@@ -55,28 +55,4 @@ router.get('/resources', function(req, res, next) {
 	res.redirect('/#resources');
 });
 
-/* GET home page. */
-router.get('/:descriptionIndex', function(req, res, next) {
-	var descriptionIndex = req.params.descriptionIndex;
-	var userFrom = req.query.from;
-	if (userFrom == null) {
-		userFrom = '';
-	}
-
-	titleIndex = 'effortless-reading';
-
-	if (descriptionData[descriptionIndex] == null) {
-		descriptionIndex = 'grr';
-	}
-
-	res.render('index', {
-		pageTitle: titleData[titleIndex].pageTitle,
-		title: titleData[titleIndex].title,
-		logo: titleData[titleIndex].logo,
-		cover: titleData[titleIndex].cover,
-		description: descriptionData[descriptionIndex],
-		from: userFrom
-	});
-});
-
 module.exports = router;
