@@ -2,7 +2,8 @@ html(lang='en')
 	head
 		title= pageTitle
 		link(href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,300italic,300,600,600italic,700,700italic', rel='stylesheet', type='text/css')
-		link(href='https://fonts.googleapis.com/css?family=Slabo+27px', rel='stylesheet', type='text/css')
+		link(href='https://fonts.googleapis.com/css?family=Roboto+Slab:300', rel='stylesheet', type='text/css')
+
 		script(src='https://code.jquery.com/jquery-2.1.4.min.js')
 		script(src='/js/home.js')
 		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css')
@@ -25,50 +26,21 @@ html(lang='en')
 			ga('create', 'UA-67135784-1', 'auto');
 			ga('send', 'pageview');
 	body
-		.dialog-background.dialog-test.hide
+		.dialog-background.dialog-subscribe.hide
 			.dialog.register-dialog
 				.dialog-title
-					center
-						img(style='width: 150px;', src='/img/#{logo}' )
+					.progress
+						.progress-bar.progress-bar-striped.active(role="progressbar", aria-valuenow="50", aria-valuemin="0", aria-valuemax="100" style="width: 50%;") 50% complete
 					.btn-close.btn ×
 				.dialog-body
-					.line.info-group
-						.line-text
-							span Test result
-
-					.col-result-content(style='text-align: justify; padding-right: 20px;')
-						#goodstart-reader.hide
-							strong It's a good start!
-								br
-							i You are on the right track. You could leverage more reading to set yourself ahead of others. The book is written for you. By applying a few simple tips, you should be able to triple your learning in half of the time.
-								br
-								br
-
-						#entrepreneur-reader.hide
-							strong You read like an entrepreneur!
-								br
-							i You are a learning machine. You learn as fast as the a successful entrepreneur lead his business. With the reading approach offered in this book, you can take back half of your time (to spend it with your loved one instead), and still able to maintain the same learning rate you demand.
-								br
-								br
-
-						#expert-reader.hide
-							strong You are an expert!
-								br
-							i People look at you as a role model when it comes to reading. You know your books in and out. Your home library is what brought you the success you deserved. This book offers the new reading approach that people at your level use to double their efficiencies in learning.
-								br
-								br
-
-					.col-result-medal.center.info-group
-						img(id='result-medal')
-
-					.clear
-
 					// Begin MailChimp Signup Form
-					.line.info-group
-						.line-text
-							span Subscription
-					div(style='margin-bottom: 10px').info-group
-						strong Where should I send the book to?
+					.popup-cta-description(style="font-size: 30px;")
+						center(style="text-transform: capitalize;")
+							| Learn how to make the best use <br> of your reading time
+					.popup-cta-description
+						center(style="color: #666; font-size: 25px;")
+							| Join my launch team <br> to get the free copy of <em> Effortless Reading </em>
+							| & win a hard copy of popular non-fiction title
 					#mc_embed_signup
 						form#mc-embedded-subscribe-form.validate(action='//vutranbooks.us11.list-manage.com/subscribe/post?u=35ceaea81da32be0ee7ccc513&id=17c1e3a18f', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
 							#mc_embed_signup_scroll
@@ -76,69 +48,11 @@ html(lang='en')
 									input#mce-TITLE(type='text', value='#{title}', name='TITLE')
 									input#mce-SUBTITLE(type='text', value='#{description}', name='SUBTITLE')
 									input#mce-FROM(type='text', value='#{from}', name='FROM')
-								.mc-field-group.info-group.before-subscribe
-									input#mce-EMAIL.required.email(type='email', value='', name='EMAIL', placeholder='Enter your email address')
-								.mc-field-group.info-group.before-subscribe
-									input#mce-NAME(type='text', value='', name='NAME', placeholder='Enter your name')
-
-
-								.line.question-group
-									.line-text
-										span Reading skill
-								i.question-group.hide
-									| These questions will let you know more about your self.
-									| Answer within the first sight, don't try to choose what is best, choose what is right for you.
-								br.question-group.hide
-								br.question-group.hide
-								.progress.question-group
-									.progress-bar.progress-bar-danger(role='progressbar', aria-valuenow='80', aria-valuemin='0', aria-valuemax='100', style='width: 0%')
-
-								.mc-field-group.input-group.question-group.current-question(data-id='1')
-									strong How many non-fiction books do you usually read?
-									ul
-										li
-											input#mce-MMERGE3-0(data-score='0', type='radio', value='Less than 10 books per year', name='MMERGE3')
-											label(for='mce-MMERGE3-0') Less than 10 books per year
-										li
-											input#mce-MMERGE3-1(data-score='0.25', type='radio', value='One every month', name='MMERGE3')
-											label(for='mce-MMERGE3-1') One every month
-										li
-											input#mce-MMERGE3-2(data-score='0.5', type='radio', value='50 books per year', name='MMERGE3')
-											label(for='mce-MMERGE3-2') 50 books per year
-										li
-											input#mce-MMERGE3-3(data-score='1', type='radio', value='More than one book per week', name='MMERGE3')
-											label(for='mce-MMERGE3-3') More than one book per week
-								.mc-field-group.input-group.question-group.hide(data-id='2')
-									strong How many non-fiction books did you re-read this year?
-									ul
-										li
-											input#mce-MMERGE4-0(data-score='0.25', type='radio', value='Less than 5', name='MMERGE4')
-											label(for='mce-MMERGE4-0') Less than 5
-										li
-											input#mce-MMERGE4-1(data-score='0.5', type='radio', value='From 5 to 12', name='MMERGE4')
-											label(for='mce-MMERGE4-1') From 5 to 12
-										li
-											input#mce-MMERGE4-2(data-score='1', type='radio', value='More than 12', name='MMERGE4')
-											label(for='mce-MMERGE4-2') More than 12
-										li
-											input#mce-MMERGE4-3(data-score='0', type='radio', value="No, I don't re-read my book", name='MMERGE4')
-											label(for='mce-MMERGE4-3') No, I don't re-read my book
-								.mc-field-group.input-group.question-group.hide(data-id='3')
-									strong How do you usually read a non-fiction book?
-									ul
-										li
-											input#mce-MMERGE5-0(data-score='0', type='radio', value='I always read from cover to cover all of my books', name='MMERGE5')
-											label(for='mce-MMERGE5-0') I always read from cover to cover all of my books
-										li
-											input#mce-MMERGE5-1(data-score='0.5', type='radio', value='I read a few chapters, usually less than half', name='MMERGE5')
-											label(for='mce-MMERGE5-1') I read a few chapters, usually less than half
-										li
-											input#mce-MMERGE5-2(data-score='1', type='radio', value='I read only one or two relevant chapters', name='MMERGE5')
-											label(for='mce-MMERGE5-2') I read only one or two relevant chapters
-										li
-											input#mce-MMERGE5-3(data-score='0.25', type='radio', value='I read from the beginning to end unless I feel bored', name='MMERGE5')
-											label(for='mce-MMERGE5-3') I read from the beginning to end unless I feel bored
-
+								.mc-field-group.info-group
+									input#mce-EMAIL.required.email(type='email', value='', name='EMAIL', placeholder='Your email')
+								.mc-field-group.info-group
+									input#mce-NAME(type='text', value='', name='NAME', placeholder='Your name')
+								
 								#mce-responses.clear
 									#mce-error-response.response(style='display:none')
 									#mce-success-response.response(style='display:none')
@@ -146,58 +60,98 @@ html(lang='en')
 								div(style='position: absolute; left: -5000px;')
 									input(type='text', name='b_35ceaea81da32be0ee7ccc513_17c1e3a18f', tabindex='-1', value='')
 								.clear
-									input#mc-embedded-subscribe.before-subscribe.info-group.btn.btn-danger.btn-subscribe.button(type='submit', value='Confirm', name='subscribe')
-									input#btn-reading-result.hide.btn.btn-danger.btn-subscribe.button(value='Next question', type='button')
+									input#mc-embedded-subscribe.btn.btn-join.button(type='submit', value='GET FREE COPY', name='subscribe')
 					script(type='text/javascript', src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js')
 					script(type='text/javascript').
 						(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='NAME';ftypes[1]='text';fnames[3]='MMERGE3';ftypes[3]='radio';fnames[4]='MMERGE4';ftypes[4]='radio';fnames[5]='MMERGE5';ftypes[5]='radio';fnames[2]='TITLE';ftypes[2]='text';fnames[6]='SUBTITLE';ftypes[6]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
 					// End mc_embed_signup
-		.container.black-section.header-section
-			center
-				img#logo(src='/img/#{logo}')
-		.container.main-section
-			.main-section-content
-
-				.book-section
-					.col-md-5.col-middle(style='margin: 0 -50px;')
-						img(src='/img/#{cover}', style='width: 100%')
-					.col-md-8.col-middle
-						h1.script= description
-						//h2.script.black= description
-						h2.script.silver Available on
-							span.text-danger October 11
-						p(style='font-size:20px')
-							| The book offers a new approach to reading non-fiction. By applying this simple approach, you will, one again, in control of your self-development. 4X your reading with half the effort. No speed reading skill required.
-						br
-						.test-section
-							.col-md-8.col-text LIMITED ADVANCED DIGITAL COPY ($7.99)
-								br
-								small Take the 30-second test & grab a FREE copy
-									br
-									| if you are qualified*
-
-							.col-md-4.col-btn
-								button.btn.btn-lg.btn-danger.btn-test(value='') GET YOUR
-									br
-									small FREE COPY
-						.clear
-
-						i *Only available until September 30, 2015.
-						br
-						br
-
-				.clear
-				.author-section.hide
-					.col-md-9(style='padding-top: 0; padding-left: 20px;')
-						h1.script About the author
-						p
-							| Millionaires with total freedom live in their own foreign country. And if you get the opportunity to be around them for longer than three months you’ll start to pick up their accent, their unique language and their swagger.
-						p
-							| Today I want to show you what this country is and how you can immerse yourself in it. Like any foreign language you can’t learn it in a single night, you can’t learn it by reading a book and you have to practice. If you immerse yourself for about three months into a culture you’ll begin to absorb and start speaking the language.
-					.col-md-3
-						.profile
-							img(src='/img/vutran.jpg', style='margin-bottom: 5px;')
-							center(style='color: #333;') Vu Tran
-					.clear
-		.container.black-section.footer-section
-			center © 2015 Vu Tran (Trần Hoàn Vũ)
+		nav(class="primary-nav")
+			ul.primary-menu
+				li#item1.menu-item
+					a(href="/") Home
+				li#item2.menu-item 
+					a(href="/resource") Resources
+				li#item3.menu-item 
+					a(href="/bonus") Bonus
+		.banner
+			.container
+				.title-section Accelerate Learning
+				
+		.hero 
+			.container 
+				.col-md-6
+					.book-details
+						.title
+							| Effortless Reading 
+						.subtitle 
+							| The Simple Ways to Read and Guarantee Remarkable Result
+						.description 
+				
+						.cta 
+							button.btn-subscribe.cta-button Show Me
+				.col-md-6.book-cover
+					img(src='../img/BookCover.jpg', style='height: 450px')
+		
+		.content-section
+			.container
+				.content-blur
+					center
+					| The book offers a new approach to reading non-fiction. By applying this simple approach, you will, one again, in control of your self-development. 4X your reading with half the effort. No speed reading skill required.
+		
+		.content-section.alternative
+			.container
+				.resource-title
+					| RESOURCES
+				.row(style="margin-bottom: 30px")
+					.col-md-6.col-md-offset-3
+						h2 Personality Test
+						ul.item-list
+							li 
+								a(href="http://www.16personalities.com/free-personality-test") MBTI Test (Free)
+							li 
+								a(href="http://strengths.gallup.com/default.aspx") StrengthFinder 2.0
+							li 
+								a(href="http://www2.amk.fi/mater/kauppa_ja_talous/demand_forecasting/vak.php") Visual-Auditive-Kinesthetic Test	
+				.row(style="margin-bottom: 30px")
+					.col-md-6.col-md-offset-3				
+						h2 Other Resources
+		.content-section 
+			.container
+				.bonus-title
+					| BONUS - WIN THE FREE HARDCOPY <br> OF MANY BOOKS INCLUDING THE ONE THING (GARY KELLER)
+				.row(style="margin-bottom: 30px")
+					.col-md-10.col-md-offset-1
+						.bonus-description 
+							h2(style="line-height: 45px;")
+								| Leave the review for <em>Effortless Reading</em> and enter your information below to win a hardcopy of famous non-fiction titles				
+							img(src='../img/BookGiveaway.png', style='height: 450px; margin-top: 30px;')
+							h2.next-book.bonus-title
+								| <b><u>NEXT BOOK GIVEAWAY</u></b>: THE ONE THING (GARY KELLER)
+							<a rel="nofollow" href="http://www.amazon.com/gp/product/1885167776/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1885167776&linkCode=as2&tag=effortreadin-20&linkId=JTFBVFFCQOKM4DWD"><img border="0" src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1885167776&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=effortreadin-20" ></a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=effortreadin-20&l=as2&o=1&a=1885167776" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+							.next-book-date 
+								| Enter before <strong>11/08/2015</strong> to win the giveaway
+							
+							
+						#mc_embed_signup
+							form#mc-embedded-subscribe-form.validate(action='//vutranbooks.us11.list-manage.com/subscribe/post?u=35ceaea81da32be0ee7ccc513&id=f9618b0832', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
+								#mc_embed_signup_scroll.bonus-form									
+									.mc-field-group
+										input#mce-EMAIL.required.email(type='email', value='', name='EMAIL', placeholder='Your email')
+									.mc-field-group
+										input#mce-FNAME(type='text', value='', name='NAME', placeholder='Your name')
+									#mce-responses.clear
+										#mce-error-response.response(style='display:none')
+										#mce-success-response.response(style='display:none')
+									// real people should not fill this in and expect good things - do not remove this or risk form bot signups
+									div(style='position: absolute; left: -5000px;')
+										input(type='text', name='b_35ceaea81da32be0ee7ccc513_f9618b0832', tabindex='-1', value='')
+									.clear
+										input#mc-embedded-subscribe-bonus.btn.btn-join.button(type='submit', value='ENTER THE GIVEAWAY', name='subscribe')
+						script(type='text/javascript', src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js')
+						script(type='text/javascript').
+							(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
+						// End mc_embed_signup
+		.clear
+		.footer-section 
+			.container 
+				center © 2015 Vu Tran

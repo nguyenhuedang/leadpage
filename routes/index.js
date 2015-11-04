@@ -29,7 +29,22 @@ var descriptionData = {
 }
 
 router.get('/', function(req, res, next) {
-	res.redirect('/grr');
+	var userFrom = req.query.from;
+	if (userFrom == null) {
+		userFrom = '';
+	}
+
+	titleIndex = 'effortless-reading';
+	descriptionIndex = 'grr';
+
+	res.render('index', {
+		pageTitle: titleData[titleIndex].pageTitle,
+		title: titleData[titleIndex].title,
+		logo: titleData[titleIndex].logo,
+		cover: titleData[titleIndex].cover,
+		description: descriptionData[descriptionIndex],
+		from: userFrom
+	});
 });
 
 /* GET home page. */

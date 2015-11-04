@@ -9,9 +9,6 @@ body, .btn {
 
 body {
 	font-size: 18px;
-	
-	padding: 50px 0;
-	background-image: url(../img/background2.jpg);
 	background-size: cover;
 }
 
@@ -29,11 +26,9 @@ body {
 
 .dialog {
 	height: 80%;
-	top: 10%;
-
+	top: 25%;
 	position: absolute;
-	width: 600px;
-	
+	width: 700px;
 	z-index: 1000;
 	left: 0;
 	right: 0;
@@ -59,12 +54,6 @@ form {
 	margin: 0;
 }
 
-.btn-subscribe {
-	width: 100%;
-	height: 50px;
-	font-size: 18px;
-	border-radius: 0;
-}
 
 .line {
 	border-bottom: 1px solid #999;
@@ -99,7 +88,7 @@ input[type=email], input[type=text] {
 
 input[type=email]:focus, input[type=text]:focus {
 	box-shadow: none;
-	border-color: #333;
+	border-color: #245C7F;
 	outline: none;
 }
 
@@ -153,16 +142,31 @@ input[type=radio] + label:hover {
 	background: #eee;
 }
 
-.btn-close {	
+.btn-close {
+	display: block;
+	font-size: 16pt;
 	position: absolute;
-	right: -50px;
-	width: 50px;
-	top: 0px;
-	background: #ddd;
-	color: #333;
-	font-size: 24px;
-	line-height: 1em;
-	border-radius: 0;
+	top: -9pt;
+	right: -9pt;
+	width: 18pt;
+	height: 18pt;
+	color: white;
+	line-height: 15pt;
+	text-align: center;
+	text-decoration: none;
+	vertical-align: baseline;
+	cursor: pointer;
+	background: black;
+	border: 2pt solid white;
+	-webkit-border-radius: 18pt;
+	-moz-border-radius: 18pt;
+	border-radius: 18pt;
+	padding-top: 0px;
+	padding-left: 4px;
+}
+
+.btn-close:hover {
+	color: #FFF;
 }
 
 .text-danger {
@@ -175,15 +179,15 @@ input[type=radio]:checked + label {
 }
 
 .dialog-title {
-	background: #333;
-	padding: 15px;
-	color: white;
+	background: #FFF;
+	padding: 15px 40px;;
 	border: 15px solid white;
 	border-bottom: none;
 }
 
 .dialog-body {
-	padding: 15px;
+	padding: 55px;
+	padding-top: 0px;
 	max-height: 90%;
 	overflow-x: hidden;
 	overflow-y: scroll;
@@ -193,7 +197,7 @@ input[type=radio]:checked + label {
 
 .main-section {
 	//width: 1180px !important;
-	padding: 15px;	
+	padding: 15px;
 	background: rgba(10, 10, 10, 0.8);
 	position: relative;
 }
@@ -218,7 +222,7 @@ input[type=radio]:checked + label {
 }
 
 .test-section {
-	font-size: 20px;	
+	font-size: 20px;
 	height: 95px;
 	background: #333;
 	color: white;
@@ -360,7 +364,7 @@ img {
 	font-size: 18px;
 
 	background: #eee;
-	color: white;	
+	color: white;
 	display: inline-block;
 	padding: 10px 20px;
 	border: 2px solid #1B7292;
@@ -389,10 +393,193 @@ img {
 
 }
 
-#mc_embed_signup input.mce_inline_error { border-color:#ED3237 !important; } 
-#mc_embed_signup div.mce_inline_error { 
+#mc_embed_signup input.mce_inline_error { border-color:#ED3237 !important; }
+#mc_embed_signup div.mce_inline_error {
 	background-color: rgba(237, 50, 55, 0.5) !important;
-	font-weight: normal !important; 
-	z-index: 1; color: #333 !important; 
+	font-weight: normal !important;
+	z-index: 1; color: #333 !important;
 	margin-top: -5px;
+}
+
+.primary-nav {
+
+}
+
+.primary-menu {
+	text-align: center;
+}
+
+li.menu-item {
+	display: inline;
+	text-decoration: none;
+	padding-right: 20px;
+}
+
+li.menu-item a {
+	padding: 20px 15px;
+	display: inline-block;
+	text-transform: uppercase;
+}
+
+li.menu-item a:hover {
+	text-decoration: none;
+}
+
+.banner {
+	background-color: #245C7F;
+	height: 150px;
+	color: #FEFEFE;
+	text-align: center;
+}
+
+.title-section {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 30px;
+	margin-top: 40px;
+	margin-bottom: 10px;
+}
+
+.hero {
+	background-image: url(../img/heroBackground.jpg);
+	height: 540px;
+	padding-top: 50px;
+}
+
+.hero .book-cover {
+	text-align: center;
+}
+
+.hero .book-details {
+	color: #FEFEFE;
+}
+
+.hero .book-details .title {
+	font-size: 40px;
+	text-transform: uppercase;
+	font-weight: bolder;
+	margin-top: 40px;
+	margin-bottom: 30px;
+}
+
+.hero .book-details .subtitle {
+	margin-top: 20px;
+	font-size: 23px;
+	font-weight: 300;
+	font-family: 'Roboto Slab', serif;
+	color: #DDD;
+}
+
+.hero .book-details .description {
+	margin-top: 20px;
+
+}
+
+.hero .book-details .cta {
+	margin-top: 20px;
+}
+
+.cta-button {
+	background-color: transparent;
+	border: 1px solid #fff;
+	clear: both;
+	color: #fff;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 400;
+	letter-spacing: 3px;
+	margin-top: 20px;
+	padding: 20px 40px;
+	text-transform: uppercase;
+	width: auto;
+	transition: background-color 0.1s ease, border-color 0.1s ease;
+}
+
+.cta-button:hover {
+  text-decoration: none;
+	color: #FFF;
+	background-color: #245C7F;
+	border-color:  #245C7F;
+}
+
+.popup-cta-description {
+	font-size: 26px;
+	margin-bottom: 30px;
+	line-height: 40px;
+}
+
+#mc_embed_signup_scroll {
+		padding-left: 80px;
+		padding-right: 80px;
+}
+
+.btn-join {
+		background-color: #245C7F;
+		width: 100%;
+		border-radius: 0px;
+		color: #FFF;
+		padding: 10px 20px;
+		font-size: 26px;
+}
+
+.btn-join:hover {
+	color: #FFF;
+	background-color: #346C8F;
+}
+
+.footer-section {
+	background-color: #03202C;
+	height: 60px;
+	color: #FFF;
+	padding-top: 20px;
+}
+
+.content-blur {
+	font-size: 30px;
+	padding: 100px;
+	font-family: 'Roboto Slab', serif;
+	text-align: center;
+}
+
+.content-section {
+	padding: 30px;
+	border-top: 1px solid #CCC;
+}
+
+.content-section.alternative {
+	background-color: #f5f5f5;
+}
+
+.resource-title, .bonus-title {
+	margin-top: 30px;
+	margin-bottom: 40px;
+	font-size: 38px;
+	color: #346C8F;
+	text-align: center;
+}
+
+ul.item-list {
+	list-style-type: circle;
+	padding-left: 40px;
+	line-height: 30px;
+}
+
+.bonus-description {
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.next-book {
+	font-size: 30px;
+	margin-top: 80px;
+}
+
+.next-book-date {
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+
+#mc_embed_signup_scroll.bonus-form {
+	padding-left: 160px;
+	padding-right: 160px;
 }
