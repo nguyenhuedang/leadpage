@@ -9,6 +9,15 @@ $(function() {
 
 	});
 
+	var $root = $('html, body');
+	$('.menu-item a').click(function() {
+			var href = $.attr(this, 'href');
+			var targetID = href.substr(href.indexOf("#") + 1);
+	    $root.animate({
+	        scrollTop: $("#" + targetID).offset().top
+	    }, 500);
+	    return false;
+	});
 });
 
 function questionValidate() {

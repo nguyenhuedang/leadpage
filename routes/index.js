@@ -47,6 +47,14 @@ router.get('/', function(req, res, next) {
 	});
 });
 
+router.get('/bonus', function(req, res, next) {
+	res.redirect('/#bonus');
+});
+
+router.get('/resources', function(req, res, next) {
+	res.redirect('/#resources');
+});
+
 /* GET home page. */
 router.get('/:descriptionIndex', function(req, res, next) {
 	var descriptionIndex = req.params.descriptionIndex;
