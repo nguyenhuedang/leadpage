@@ -522,7 +522,7 @@ li.menu-item a:hover {
 		font-size: 26px;
 }
 
-.btn-join:hover {
+.btn-join:hover, .btn-join:focus {
 	color: #FFF;
 	background-color: #346C8F;
 }

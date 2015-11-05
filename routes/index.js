@@ -48,7 +48,9 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/bonus', function(req, res, next) {
-	res.redirect('/#bonus');
+	res.render('bonus', {
+		pageTitle: titleData["effortless-reading"].pageTitle
+	});
 });
 
 router.get('/resources', function(req, res, next) {
