@@ -440,6 +440,11 @@ li.menu-item a:hover {
 	font-family: "Roboto Slab", serif;
 }
 
+.title-section a {
+	color: #FFF;
+	text-decoration: underline;
+}
+
 .hero {
 	background-image: url(../img/heroBackground.jpg);
 	height: 540px;
@@ -572,6 +577,7 @@ ul.item-list {
 .next-book {
 	font-size: 30px;
 	margin-top: 80px;
+	display: block;
 }
 
 .next-book-date {
