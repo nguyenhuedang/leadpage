@@ -589,3 +589,74 @@ ul.item-list {
 	padding-left: 160px;
 	padding-right: 160px;
 }
+
+.testimonial-container {
+	background-color: white;
+	padding: 60px;
+	margin-top: 30px;
+	border-radius: 4px;
+	border: 1px solid #DDD;
+}
+
+.testimonial-container .testimonial-text {
+	font-family: 'Roboto Slab', serif;
+	font-size: 26px;
+	margin-bottom: 20px;
+}
+
+.testimonial-container .testimonial-author {
+	font-weight: bold;
+	color: #346C8F;
+	font-size: 16px;
+	text-align: right;
+	text-transform: uppercase;
+	opacity: 0.8;
+}
+
+.quote-icon {
+	height: 60px;
+  position: absolute;
+  margin-left: -45px;
+  margin-top: -50px;
+  opacity: 0.3;
+}
+
+.upcoming-container {
+	background-color: #EEE;
+	border: 1px solid #DDD;
+	padding: 30px;
+}
+
+.upcoming-container h2 {
+	color: #346C8F;
+	display: block;
+	margin-top: 20px;
+}
+
+.upcoming-container .title {
+	font-weight: bold;
+}
+
+.upcoming-container .date {
+	color: #333;
+}
+
+.past-container {
+	background-color: #346C8F;
+	border: 1px solid #DDD;
+	padding: 30px;
+}
+
+.past-container h2 {
+	color: #FFF;
+	display: block;
+	margin-top: 10px;
+}
+
+.past-container .title {
+	font-weight: bold;
+}
+
+.past-container .date, .past-container a, .past-container a:hover {
+	color: #FFF;
+}
